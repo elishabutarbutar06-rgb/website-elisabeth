@@ -2,444 +2,263 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Bayang-Bayang Karsa — Elisabeth</title>
 
-<meta name="description" content="Bayang-Bayang Karsa, sebuah novel karya Elisabeth tentang rahasia, keluarga, pengkhianatan, dan identitas yang tersembunyi.">
+<meta name="description"
+content="Bayang-Bayang Karsa, sebuah novel tentang rahasia, keluarga, kekuasaan, pengkhianatan, dan perjalanan menemukan jati diri.">
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #100c12;
-    color: #f5edf2;
-    line-height: 1.7;
+body{
+    font-family:Georgia, 'Times New Roman', serif;
+    background:#0b0b0d;
+    color:#eeeeee;
+    line-height:1.7;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(16, 12, 18, 0.96);
-    border-bottom: 1px solid #3a2935;
-    padding: 18px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(11,11,13,.95);
+    border-bottom:1px solid #332126;
+    backdrop-filter:blur(10px);
 }
 
-.logo {
-    color: #d98bad;
-    font-size: 21px;
-    font-weight: bold;
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.nav-links {
-    display: flex;
-    gap: 24px;
+.logo{
+    color:#c73558;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
-.nav-links a {
-    color: #eee3e9;
-    text-decoration: none;
-    font-size: 14px;
+.nav-links{
+    display:flex;
+    gap:25px;
 }
 
-.nav-links a:hover {
-    color: #d98bad;
+.nav-links a{
+    color:#dddddd;
+    text-decoration:none;
+    font-size:14px;
 }
 
-.hero {
-    min-height: 88vh;
-    padding: 90px 7%;
-    display: flex;
-    align-items: center;
+.nav-links a:hover{
+    color:#d94667;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 25px;
+    position:relative;
+    overflow:hidden;
+
     background:
-        radial-gradient(circle at 80% 20%, #4a263d 0, transparent 30%),
-        radial-gradient(circle at 20% 80%, #291a2a 0, transparent 35%),
-        #100c12;
+    radial-gradient(circle at 50% 20%,
+    rgba(160,20,50,.28),
+    transparent 35%),
+
+    radial-gradient(circle at 80% 80%,
+    rgba(120,20,40,.15),
+    transparent 35%),
+
+    #0b0b0d;
 }
 
-.hero-content {
-    max-width: 850px;
+.hero-content{
+    max-width:850px;
+    position:relative;
+    z-index:2;
 }
 
-.label {
-    display: inline-block;
-    background: #4c243d;
-    color: #e9a8c5;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 24px;
+.small-title{
+    color:#c73558;
+    font-size:14px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:20px;
 }
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(48px, 9vw, 92px);
-    line-height: 1;
-    margin-bottom: 25px;
-    color: #fff7fb;
+.hero h1{
+    font-size:clamp(48px,9vw,95px);
+    line-height:1;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+
+    background:linear-gradient(
+        120deg,
+        #ffffff,
+        #c73558,
+        #ffffff
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
-h1 span {
-    color: #d98bad;
+.hero-subtitle{
+    font-size:20px;
+    color:#bbbbbb;
+    max-width:650px;
+    margin:0 auto 35px;
 }
 
-.hero p {
-    max-width: 700px;
-    color: #c9bac3;
-    font-size: 19px;
-    margin-bottom: 35px;
+.author{
+    color:#c73558;
+    font-size:17px;
+    margin-bottom:35px;
 }
 
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.2s;
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.btn-primary {
-    background: #a63d70;
-    color: white;
+.btn-primary{
+    background:#b52d50;
+    color:white;
 }
 
-.btn-primary:hover {
-    background: #c04d83;
+.btn-primary:hover{
+    background:#d33b61;
+    transform:translateY(-2px);
 }
 
-.btn-secondary {
-    border: 1px solid #674657;
-    color: #f2dce7;
+.btn-secondary{
+    border:1px solid #61303d;
+    color:#eeeeee;
 }
 
-.btn-secondary:hover {
-    background: #261923;
+.btn-secondary:hover{
+    background:#241318;
 }
 
-section {
-    padding: 80px 7%;
+/* SECTION */
+
+section{
+    max-width:1050px;
+    margin:auto;
+    padding:90px 25px;
 }
 
-.section-title {
-    font-family: Georgia, serif;
-    font-size: 38px;
-    margin-bottom: 15px;
+.section-label{
+    color:#c73558;
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
-.section-desc {
-    color: #bcaeb7;
-    max-width: 700px;
-    margin-bottom: 35px;
+.section-title{
+    font-size:38px;
+    margin-bottom:20px;
 }
 
-.about {
-    background: #171118;
+.section-description{
+    color:#aaaaaa;
+    max-width:700px;
+    margin-bottom:35px;
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
+/* SINOPSIS */
+
+.synopsis{
+    background:#101014;
 }
 
-.card {
-    background: #201721;
-    border: 1px solid #382936;
-    border-radius: 18px;
-    padding: 30px;
+.synopsis-box{
+    border-left:3px solid #b52d50;
+    padding:25px 30px;
+    background:#141419;
+    border-radius:0 10px 10px 0;
 }
 
-.card h3 {
-    color: #e5a1bd;
-    margin-bottom: 12px;
-    font-family: Georgia, serif;
-    font-size: 24px;
+.synopsis-box p{
+    color:#cccccc;
+    margin-bottom:15px;
 }
 
-.card p {
-    color: #c7b9c1;
+/* QUOTE */
+
+.quote{
+    text-align:center;
+    padding:100px 25px;
+    background:
+    linear-gradient(
+        rgba(20,5,10,.8),
+        rgba(20,5,10,.8)
+    ),
+    #170c10;
 }
 
-.chapters {
-    background: #100c12;
+.quote-text{
+    max-width:750px;
+    margin:auto;
+    font-size:30px;
+    font-style:italic;
+    color:#eeeeee;
 }
 
-.chapter-list {
-    display: grid;
-    gap: 15px;
-    max-width: 850px;
+.quote-author{
+    margin-top:20px;
+    color:#c73558;
 }
 
-.chapter {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border: 1px solid #392936;
-    background: #181219;
-    border-radius: 14px;
+/* CHAPTERS */
+
+.chapter-list{
+    display:grid;
+    gap:15px;
 }
 
-.chapter-number {
-    min-width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: #4b253d;
-    color: #e5a1bd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-.chapter h3 {
-    font-family: Georgia, serif;
-    color: #f4e8ee;
-    margin-bottom: 3px;
-}
-
-.chapter p {
-    color: #a999a4;
-    font-size: 14px;
-}
-
-.contact {
-    text-align: center;
-    background: #171118;
-}
-
-.contact p {
-    max-width: 600px;
-    margin: 0 auto 25px;
-    color: #c2b3bd;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 7%;
-    color: #887984;
-    font-size: 13px;
-    border-top: 1px solid #30232d;
-}
-
-@media (max-width: 700px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        min-height: 80vh;
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 60px 6%;
-    }
-
-    .chapter {
-        align-items: flex-start;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-    <div class="logo">Elisabeth.</div>
-
-    <div class="nav-links">
-        <a href="#novel">Novel</a>
-        <a href="#bab">Daftar Bab</a>
-        <a href="#tentang">Tentang</a>
-    </div>
-</nav>
-
-<header class="hero">
-
-    <div class="hero-content">
-
-        <div class="label">NOVEL ORIGINAL</div>
-
-        <h1>
-            Bayang-Bayang <span>Karsa</span>
-        </h1>
-
-        <p>
-            Sebuah kisah tentang kekuasaan, keluarga, pengkhianatan,
-            dan identitas yang tersembunyi di balik dunia penuh darah.
-        </p>
-
-        <div class="buttons">
-            <a class="btn btn-primary" href="#bab">
-                Mulai Membaca
-            </a>
-
-            <a class="btn btn-secondary" href="#tentang">
-                Tentang Novel
-            </a>
-        </div>
-
-    </div>
-
-</header>
-
-<section class="about" id="novel">
-
-    <h2 class="section-title">Bayang-Bayang Karsa</h2>
-
-    <p class="section-desc">
-        Tidak semua keluarga dibangun oleh darah.
-        Tidak semua kesetiaan lahir dari kebenaran.
-        Dan terkadang, orang yang paling kita percaya
-        justru menyimpan rahasia terbesar tentang siapa diri kita.
-    </p>
-
-    <div class="about-grid">
-
-        <div class="card">
-            <h3>Tentang Cerita</h3>
-
-            <p>
-                Arga Wijaya telah menghabiskan delapan belas tahun
-                hidupnya sebagai anak angkat Raja Karsa, seorang tokoh
-                berpengaruh yang membesarkannya dalam dunia penuh
-                kekuasaan, ancaman, dan pengkhianatan.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Rahasia yang Terkubur</h3>
-
-            <p>
-                Pada sebuah malam yang seharusnya menjadi awal dari
-                sebuah pertunangan, Arga justru menemukan kebenaran
-                yang mampu menghancurkan seluruh kehidupannya:
-                identitas sebenarnya dan hubungan darah yang selama
-                ini disembunyikan darinya.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="chapters" id="bab">
-
-    <h2 class="section-title">Daftar Bab</h2>
-
-    <p class="section-desc">
-        Ikuti perjalanan Arga ketika satu demi satu rahasia mulai
-        terungkap.
-    </p>
-
-    <div class="chapter-list">
-
-        <div class="chapter">
-
-            <div class="chapter-number">
-                01
-            </div>
-
-            <div>
-                <h3>Malam Pertunangan yang Mengubah Segalanya</h3>
-
-                <p>
-                    Pertemuan yang berakhir dengan pengungkapan
-                    identitas Arga.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="chapter">
-
-            <div class="chapter-number">
-                02
-            </div>
-
-            <div>
-                <h3>Bab Berikutnya</h3>
-
-                <p>
-                    Segera hadir.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="chapter">
-
-            <div class="chapter-number">
-                03
-            </div>
-
-            <div>
-                <h3>Bab Berikutnya</h3>
-
-                <p>
-                    Segera hadir.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="contact" id="tentang">
-
-    <h2 class="section-title">Tentang Penulis</h2>
-
-    <p>
-        <strong>Elisabeth</strong> adalah penulis di balik
-        Bayang-Bayang Karsa, sebuah cerita yang memadukan
-        misteri, drama keluarga, kekuasaan, dan perjalanan
-        menemukan jati diri.
-    </p>
-
-    <a class="btn btn-primary" href="#novel">
-        Kembali ke Novel
-    </a>
-
-</section>
-
-<footer>
-    © 2026 Elisabeth. Bayang-Bayang Karsa.
-</footer>
-
-</body>
-</html>
+.chapter{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:22px;
+    background:#121216;
+    border:1px solid #27272d;
+    border-radius:
