@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisabeth — Penulis</title>
+  <meta name="description" content="Website portofolio penulis novel.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#2d2430;background:#fff9fc}
+    nav{position:sticky;top:0;z-index:10;background:rgba(255,249,252,.94);backdrop-filter:blur(10px);border-bottom:1px solid #f0dce7}
+    .nav{max-width:1050px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:800;font-size:20px;color:#a23b6b}
+    nav a{color:#4a3943;text-decoration:none;margin-left:18px;font-size:14px}
+    nav a:hover{color:#a23b6b}
+    .hero{max-width:1050px;margin:auto;padding:90px 22px 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+    .tag{display:inline-block;padding:7px 12px;border-radius:99px;background:#f7dce9;color:#8c2f5b;font-size:13px;font-weight:700;margin-bottom:18px}
+    h1{font-size:clamp(42px,7vw,72px);line-height:1.05;margin-bottom:20px}
+    h1 span{color:#a23b6b}
+    .hero p{font-size:18px;color:#665660;max-width:650px}
+    .buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:700}
+    .primary{background:#a23b6b;color:white}
+    .secondary{border:1px solid #d9b6c8;color:#8c2f5b;background:white}
+    .card{background:white;border:1px solid #efdce6;border-radius:24px;padding:28px;box-shadow:0 15px 40px rgba(126,59,91,.08)}
+    .cover{aspect-ratio:3/4;border-radius:18px;background:linear-gradient(145deg,#a23b6b,#e98db5);display:flex;align-items:end;padding:28px;color:white;position:relative;overflow:hidden}
+    .cover:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.15);top:-80px;right:-50px}
+    .cover h2{font-size:32px;position:relative}
+    section{max-width:1050px;margin:auto;padding:75px 22px}
+    .section-title{font-size:34px;margin-bottom:12px}
+    .section-desc{color:#76656e;margin-bottom:30px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .work h3{margin:14px 0 7px}
+    .work p{color:#75646d;font-size:14px}
+    .mini-cover{height:190px;border-radius:16px;background:linear-gradient(135deg,#512b3f,#c55d88);color:#fff;padding:20px;display:flex;align-items:end;font-weight:800;font-size:22px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contact{text-align:center;background:#f7e4ed;border-radius:28px;padding:55px 25px}
+    .contact p{max-width:600px;margin:12px auto 25px;color:#685762}
+    footer{text-align:center;padding:35px 20px;color:#806c76;border-top:1px solid #f0dce7;font-size:13px}
+    @media(max-width:760px){
+      .hero,.about{grid-template-columns:1fr}
+      .hero{padding-top:55px}
+      .grid{grid-template-columns:1fr}
+      nav .links{display:none}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav">
+    <div class="brand">Elisabeth.</div>
+    <div class="links">
+      <a href="#tentang">Tentang</a>
+      <a href="#karya">Karya</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="tag">PENULIS NOVEL</div>
+    <h1>Cerita yang ingin <span>diingat.</span></h1>
+    <p>Sebuah ruang sederhana untuk memperkenalkan karya, perjalanan menulis, dan cerita-cerita yang lahir dari imajinasi.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#karya">Lihat Karya</a>
+      <a class="btn secondary" href="#kontak">Hubungi Saya</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="cover"><h2>Words<br>become<br>stories.</h2></div>
+  </div>
+</header>
+
+<section id="tentang">
+  <h2 class="section-title">Tentang Saya</h2>
+  <p class="section-desc">Sedikit tentang penulis di balik cerita.</p>
+  <div class="about">
+    <div class="card">
+      <h3>Menulis dengan rasa</h3>
+      <p>Saya percaya cerita yang baik bukan hanya tentang alur, tetapi juga tentang emosi, karakter, dan pengalaman yang membuat pembaca merasa dekat dengan dunia di dalamnya.</p>
+    </div>
+    <div class="card">
+      <h3>Fokus karya</h3>
+      <p>Novel fiksi, drama, perjalanan hidup, keluarga, persahabatan, dan kisah-kisah yang menyimpan harapan di balik setiap konflik.</p>
+    </div>
+  </div>
+</section>
+
+<section id="karya">
+  <h2 class="section-title">Karya</h2>
+  <p class="section-desc">Beberapa karya yang bisa ditampilkan di sini.</p>
+  <div class="grid">
+    <article class="card work">
+      <div class="mini-cover">Kisah Perjalanan Anak Kedua</div>
+      <h3>Kisah Perjalanan Anak Kedua</h3>
+      <p>Perjalanan hidup seorang anak kedua dari masa kecil hingga menemukan jalannya sendiri.</p>
+    </article>
+    <article class="card work">
+      <div class="mini-cover">Bayang-Bayang Karsa</div>
+      <h3>Bayang-Bayang Karsa</h3>
+      <p>Drama misteri dengan rahasia, pilihan, dan hubungan antarkarakter yang terus berkembang.</p>
+    </article>
+    <article class="card work">
+      <div class="mini-cover">Karya Berikutnya</div>
+      <h3>Segera Hadir</h3>
+      <p>Tempat untuk karya baru, cerita pendek, atau proyek tulisan berikutnya.</p>
+    </article>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="contact">
+    <h2 class="section-title">Mari Terhubung</h2>
+    <p>Ingin bekerja sama, membicarakan tulisan, atau sekadar menyapa? Hubungi saya melalui email.</p>
+    <a class="btn primary" href="mailto:emailkamu@example.com">Kirim Email</a>
+  </div>
+</section>
+
+<footer>© 2026 Elisabeth. Dibuat dengan HTML & CSS.</footer>
+</body>
+</html>
