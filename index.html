@@ -1,123 +1,445 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elisabeth — Penulis</title>
-  <meta name="description" content="Website portofolio penulis novel.">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#2d2430;background:#fff9fc}
-    nav{position:sticky;top:0;z-index:10;background:rgba(255,249,252,.94);backdrop-filter:blur(10px);border-bottom:1px solid #f0dce7}
-    .nav{max-width:1050px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
-    .brand{font-weight:800;font-size:20px;color:#a23b6b}
-    nav a{color:#4a3943;text-decoration:none;margin-left:18px;font-size:14px}
-    nav a:hover{color:#a23b6b}
-    .hero{max-width:1050px;margin:auto;padding:90px 22px 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
-    .tag{display:inline-block;padding:7px 12px;border-radius:99px;background:#f7dce9;color:#8c2f5b;font-size:13px;font-weight:700;margin-bottom:18px}
-    h1{font-size:clamp(42px,7vw,72px);line-height:1.05;margin-bottom:20px}
-    h1 span{color:#a23b6b}
-    .hero p{font-size:18px;color:#665660;max-width:650px}
-    .buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:700}
-    .primary{background:#a23b6b;color:white}
-    .secondary{border:1px solid #d9b6c8;color:#8c2f5b;background:white}
-    .card{background:white;border:1px solid #efdce6;border-radius:24px;padding:28px;box-shadow:0 15px 40px rgba(126,59,91,.08)}
-    .cover{aspect-ratio:3/4;border-radius:18px;background:linear-gradient(145deg,#a23b6b,#e98db5);display:flex;align-items:end;padding:28px;color:white;position:relative;overflow:hidden}
-    .cover:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.15);top:-80px;right:-50px}
-    .cover h2{font-size:32px;position:relative}
-    section{max-width:1050px;margin:auto;padding:75px 22px}
-    .section-title{font-size:34px;margin-bottom:12px}
-    .section-desc{color:#76656e;margin-bottom:30px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .work h3{margin:14px 0 7px}
-    .work p{color:#75646d;font-size:14px}
-    .mini-cover{height:190px;border-radius:16px;background:linear-gradient(135deg,#512b3f,#c55d88);color:#fff;padding:20px;display:flex;align-items:end;font-weight:800;font-size:22px}
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-    .contact{text-align:center;background:#f7e4ed;border-radius:28px;padding:55px 25px}
-    .contact p{max-width:600px;margin:12px auto 25px;color:#685762}
-    footer{text-align:center;padding:35px 20px;color:#806c76;border-top:1px solid #f0dce7;font-size:13px}
-    @media(max-width:760px){
-      .hero,.about{grid-template-columns:1fr}
-      .hero{padding-top:55px}
-      .grid{grid-template-columns:1fr}
-      nav .links{display:none}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bayang-Bayang Karsa — Elisabeth</title>
+
+<meta name="description" content="Bayang-Bayang Karsa, sebuah novel karya Elisabeth tentang rahasia, keluarga, pengkhianatan, dan identitas yang tersembunyi.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #100c12;
+    color: #f5edf2;
+    line-height: 1.7;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(16, 12, 18, 0.96);
+    border-bottom: 1px solid #3a2935;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d98bad;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #eee3e9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #d98bad;
+}
+
+.hero {
+    min-height: 88vh;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 20%, #4a263d 0, transparent 30%),
+        radial-gradient(circle at 20% 80%, #291a2a 0, transparent 35%),
+        #100c12;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.label {
+    display: inline-block;
+    background: #4c243d;
+    color: #e9a8c5;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 9vw, 92px);
+    line-height: 1;
+    margin-bottom: 25px;
+    color: #fff7fb;
+}
+
+h1 span {
+    color: #d98bad;
+}
+
+.hero p {
+    max-width: 700px;
+    color: #c9bac3;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #a63d70;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #c04d83;
+}
+
+.btn-secondary {
+    border: 1px solid #674657;
+    color: #f2dce7;
+}
+
+.btn-secondary:hover {
+    background: #261923;
+}
+
+section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #bcaeb7;
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.about {
+    background: #171118;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.card {
+    background: #201721;
+    border: 1px solid #382936;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.card h3 {
+    color: #e5a1bd;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.card p {
+    color: #c7b9c1;
+}
+
+.chapters {
+    background: #100c12;
+}
+
+.chapter-list {
+    display: grid;
+    gap: 15px;
+    max-width: 850px;
+}
+
+.chapter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #392936;
+    background: #181219;
+    border-radius: 14px;
+}
+
+.chapter-number {
+    min-width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #4b253d;
+    color: #e5a1bd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.chapter h3 {
+    font-family: Georgia, serif;
+    color: #f4e8ee;
+    margin-bottom: 3px;
+}
+
+.chapter p {
+    color: #a999a4;
+    font-size: 14px;
+}
+
+.contact {
+    text-align: center;
+    background: #171118;
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #c2b3bd;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 7%;
+    color: #887984;
+    font-size: 13px;
+    border-top: 1px solid #30232d;
+}
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
     }
-  </style>
+
+    .hero {
+        min-height: 80vh;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .chapter {
+        align-items: flex-start;
+    }
+}
+</style>
 </head>
+
 <body>
+
 <nav>
-  <div class="nav">
-    <div class="brand">Elisabeth.</div>
-    <div class="links">
-      <a href="#tentang">Tentang</a>
-      <a href="#karya">Karya</a>
-      <a href="#kontak">Kontak</a>
+    <div class="logo">Elisabeth.</div>
+
+    <div class="nav-links">
+        <a href="#novel">Novel</a>
+        <a href="#bab">Daftar Bab</a>
+        <a href="#tentang">Tentang</a>
     </div>
-  </div>
 </nav>
 
 <header class="hero">
-  <div>
-    <div class="tag">PENULIS NOVEL</div>
-    <h1>Cerita yang ingin <span>diingat.</span></h1>
-    <p>Sebuah ruang sederhana untuk memperkenalkan karya, perjalanan menulis, dan cerita-cerita yang lahir dari imajinasi.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#karya">Lihat Karya</a>
-      <a class="btn secondary" href="#kontak">Hubungi Saya</a>
+
+    <div class="hero-content">
+
+        <div class="label">NOVEL ORIGINAL</div>
+
+        <h1>
+            Bayang-Bayang <span>Karsa</span>
+        </h1>
+
+        <p>
+            Sebuah kisah tentang kekuasaan, keluarga, pengkhianatan,
+            dan identitas yang tersembunyi di balik dunia penuh darah.
+        </p>
+
+        <div class="buttons">
+            <a class="btn btn-primary" href="#bab">
+                Mulai Membaca
+            </a>
+
+            <a class="btn btn-secondary" href="#tentang">
+                Tentang Novel
+            </a>
+        </div>
+
     </div>
-  </div>
-  <div class="card">
-    <div class="cover"><h2>Words<br>become<br>stories.</h2></div>
-  </div>
+
 </header>
 
-<section id="tentang">
-  <h2 class="section-title">Tentang Saya</h2>
-  <p class="section-desc">Sedikit tentang penulis di balik cerita.</p>
-  <div class="about">
-    <div class="card">
-      <h3>Menulis dengan rasa</h3>
-      <p>Saya percaya cerita yang baik bukan hanya tentang alur, tetapi juga tentang emosi, karakter, dan pengalaman yang membuat pembaca merasa dekat dengan dunia di dalamnya.</p>
+<section class="about" id="novel">
+
+    <h2 class="section-title">Bayang-Bayang Karsa</h2>
+
+    <p class="section-desc">
+        Tidak semua keluarga dibangun oleh darah.
+        Tidak semua kesetiaan lahir dari kebenaran.
+        Dan terkadang, orang yang paling kita percaya
+        justru menyimpan rahasia terbesar tentang siapa diri kita.
+    </p>
+
+    <div class="about-grid">
+
+        <div class="card">
+            <h3>Tentang Cerita</h3>
+
+            <p>
+                Arga Wijaya telah menghabiskan delapan belas tahun
+                hidupnya sebagai anak angkat Raja Karsa, seorang tokoh
+                berpengaruh yang membesarkannya dalam dunia penuh
+                kekuasaan, ancaman, dan pengkhianatan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Rahasia yang Terkubur</h3>
+
+            <p>
+                Pada sebuah malam yang seharusnya menjadi awal dari
+                sebuah pertunangan, Arga justru menemukan kebenaran
+                yang mampu menghancurkan seluruh kehidupannya:
+                identitas sebenarnya dan hubungan darah yang selama
+                ini disembunyikan darinya.
+            </p>
+        </div>
+
     </div>
-    <div class="card">
-      <h3>Fokus karya</h3>
-      <p>Novel fiksi, drama, perjalanan hidup, keluarga, persahabatan, dan kisah-kisah yang menyimpan harapan di balik setiap konflik.</p>
+
+</section>
+
+<section class="chapters" id="bab">
+
+    <h2 class="section-title">Daftar Bab</h2>
+
+    <p class="section-desc">
+        Ikuti perjalanan Arga ketika satu demi satu rahasia mulai
+        terungkap.
+    </p>
+
+    <div class="chapter-list">
+
+        <div class="chapter">
+
+            <div class="chapter-number">
+                01
+            </div>
+
+            <div>
+                <h3>Malam Pertunangan yang Mengubah Segalanya</h3>
+
+                <p>
+                    Pertemuan yang berakhir dengan pengungkapan
+                    identitas Arga.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="chapter">
+
+            <div class="chapter-number">
+                02
+            </div>
+
+            <div>
+                <h3>Bab Berikutnya</h3>
+
+                <p>
+                    Segera hadir.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="chapter">
+
+            <div class="chapter-number">
+                03
+            </div>
+
+            <div>
+                <h3>Bab Berikutnya</h3>
+
+                <p>
+                    Segera hadir.
+                </p>
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<section id="karya">
-  <h2 class="section-title">Karya</h2>
-  <p class="section-desc">Beberapa karya yang bisa ditampilkan di sini.</p>
-  <div class="grid">
-    <article class="card work">
-      <div class="mini-cover">Kisah Perjalanan Anak Kedua</div>
-      <h3>Kisah Perjalanan Anak Kedua</h3>
-      <p>Perjalanan hidup seorang anak kedua dari masa kecil hingga menemukan jalannya sendiri.</p>
-    </article>
-    <article class="card work">
-      <div class="mini-cover">Bayang-Bayang Karsa</div>
-      <h3>Bayang-Bayang Karsa</h3>
-      <p>Drama misteri dengan rahasia, pilihan, dan hubungan antarkarakter yang terus berkembang.</p>
-    </article>
-    <article class="card work">
-      <div class="mini-cover">Karya Berikutnya</div>
-      <h3>Segera Hadir</h3>
-      <p>Tempat untuk karya baru, cerita pendek, atau proyek tulisan berikutnya.</p>
-    </article>
-  </div>
+<section class="contact" id="tentang">
+
+    <h2 class="section-title">Tentang Penulis</h2>
+
+    <p>
+        <strong>Elisabeth</strong> adalah penulis di balik
+        Bayang-Bayang Karsa, sebuah cerita yang memadukan
+        misteri, drama keluarga, kekuasaan, dan perjalanan
+        menemukan jati diri.
+    </p>
+
+    <a class="btn btn-primary" href="#novel">
+        Kembali ke Novel
+    </a>
+
 </section>
 
-<section id="kontak">
-  <div class="contact">
-    <h2 class="section-title">Mari Terhubung</h2>
-    <p>Ingin bekerja sama, membicarakan tulisan, atau sekadar menyapa? Hubungi saya melalui email.</p>
-    <a class="btn primary" href="mailto:emailkamu@example.com">Kirim Email</a>
-  </div>
-</section>
+<footer>
+    © 2026 Elisabeth. Bayang-Bayang Karsa.
+</footer>
 
-<footer>© 2026 Elisabeth. Dibuat dengan HTML & CSS.</footer>
 </body>
 </html>
